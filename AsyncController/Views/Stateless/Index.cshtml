@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>State comparison: ViewBag, TempData, Session</h2>
+
+<p>Sceenario 1. Press TempData (TempData value appears) then About (TempData value disappears).</p>
+<p>Sceenario 2. Press TempData + Keep (TempData value appears) then About (TempData value is still visible).</p>
+<p>Sceenario 3. Press SessionState. Is visible at any time (both Index and About paegs).</p>
+
+@Html.ActionLink("TempData with redirection to Index", "TempDataState", "Stateless")</br>
+@Html.ActionLink("TempData with redirection to Index + Keep", "TempDataKeep", "Stateless")</br>
+@Html.ActionLink("About", "About", "Stateless")</br>
+@Html.ActionLink("Session with redirection to Index", "SessionState", "Stateless")</br></br>
+
+@ViewBag.Value</br>
+@TempData["Value"]</br>
+@Session["Value"]

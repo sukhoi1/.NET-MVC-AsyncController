@@ -2,9 +2,8 @@
 
 namespace AsyncController.Controllers
 {
-    public class HomeController : Controller
+    public class AsyncController : Controller
     {
-        // GET: Home
         public ActionResult Index()
         {
             return View();
